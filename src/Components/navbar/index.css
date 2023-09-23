@@ -1,0 +1,12 @@
+.logoNav{
+    width: 20%;
+}
+
+.navBase{
+    background-color: orange;
+    height: 100px;
+}
+
+.linkNav{
+    color: white !important;
+}
