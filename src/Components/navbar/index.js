@@ -15,21 +15,6 @@ import jQuery from 'jquery';
 export default function NavbarBase(){
     return(
         <>
-        {/* <Navbar className='navBase' light expand="md">
-            <NavbarBrand href="#"><img className='logoNav' src={logo} alt="Logo"></img></NavbarBrand>
-            <NavbarToggler onClick={toggle} />
-            <Nav className="ml-auto" navbar>
-                <NavItem>
-                <NavLink className='linkNav' href="/home">Contact</NavLink>
-                </NavItem>
-                <NavItem>
-                <NavLink className='linkNav' href="/link">About</NavLink>
-                </NavItem>
-                <NavItem>
-                <NavLink className='linkNav' href="/about">Login</NavLink>
-                </NavItem>
-            </Nav>
-        </Navbar> */}
         <Navbar className="navbar navBase navbar-expand-md">
             <NavbarBrand href="#"><img className='logoNav' src={logo} alt="Logo"></img></NavbarBrand>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
