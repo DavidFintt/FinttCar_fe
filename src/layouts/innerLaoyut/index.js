@@ -20,7 +20,7 @@ export default function InnerLayout() {
     <>
       <NavbarBase />
       <RoutesApp/>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
