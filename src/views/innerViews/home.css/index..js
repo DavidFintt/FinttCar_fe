@@ -9,11 +9,28 @@ import {
     Col
   } from 'reactstrap'
   
-  import React from "react";
+  import React , {useEffect, useState} from "react";
   import ListVehicles from '../../../Components/listVehicles';
   import './index.css'
   import CarouselApp from '../../../Components/caroussel';
+  import VehicleService from '../../../services/vehicleService';
+
+
+
   export default function Home() {
+
+    const vehicleService = new VehicleService();
+
+    const [vehicles, setVehicles] = useState([]);
+
+    useEffect(() => {
+      this.findVehicles();
+    }, [])
+
+    const findVehicles = async () => {
+      const vehicle = await this.vehicleService.getAll()
+      console.log(vehicle)
+    }
     return (
       <>
         <CarouselApp />
