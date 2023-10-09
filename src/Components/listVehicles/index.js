@@ -19,11 +19,12 @@ export default function ListVehicles(props){
         <>
             <Col>
                 <img src={props.img}></img>
-                <p><strong>Model:</strong> {props.model}</p>
-                <p><strong>Year:</strong> {props.year}</p>
-                <p><strong>Manufacturer:</strong> {props.manufacturer}</p>
-                <p><strong>Capacity:</strong> {props.capacity}</p>
-                <p><strong>Dealership:</strong> {props.dealership}</p>
+                <p><strong>Model: </strong> {props.model}</p>
+                <p><strong>Year: </strong> {props.year}</p>
+                <p><strong>Manufacturer: </strong> {props.manufacturer}</p>
+                <p><strong>Capacity: </strong> {props.capacity}</p>
+                <p><strong>Amount: </strong> {props.amount}</p>
+                <p><strong>Dealership: </strong> {props.dealership}</p>
             </Col>
         </>
     )

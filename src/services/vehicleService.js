@@ -1,5 +1,5 @@
 
-import * as axios from "axios";
+import axios from 'axios';
 
 export default class VehicleService {
 
@@ -15,7 +15,7 @@ getAll = async () =>{
             method: 'GET',
             url: 'http://127.0.0.1:8000/vehicleList/api/v1/',
             headers: {
-                'Content-Type': 'applycation/json'
+                'Content-Type': 'application/json'
             }
         }
 
