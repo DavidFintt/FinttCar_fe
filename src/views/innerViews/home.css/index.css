@@ -8,3 +8,20 @@
     padding-bottom: 10px;
     color: rgb(230, 230, 230) !important;
 }
+
+.highlight-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .highlight {
+    width: 100vw;
+    background-color: #6cbdb5;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .highlight span {
+    color: white;
+    font-size: 24px;
+  }
