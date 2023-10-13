@@ -24,11 +24,15 @@ import {
     const vehicleService = new VehicleService();
 
     const [vehicles, setVehicles] = useState([{model: '', year: '', manufacturer: '', capacity:'', dealership: ''}]);
+    const [vehiclesHighlight, setVehHighlights] = useState([{model: '', year: '', manufacturer: '', capacity:'', dealership: '', highlights:'', img:''}]);
 
 
     const findVehicles = async () => {
       const vehicle = await vehicleService.getAll()
+      const vehicleHighlights = vehicle.filter(vh => vh.highlights === true).map(vh => vh);
+      setVehHighlights(vehicleHighlights)
       setVehicles(vehicle)
+      console.log(vehicleHighlights)
   
     }
 
@@ -44,10 +48,12 @@ import {
         <span><i class="fa fa-star" aria-hidden="true"></i> highlights</span>
         </div>
     </div>
+
+    {/* Highlights session */}
         <Col md={6}>
           <Row>
-            {vehicles.map(vehicle => (
-              <ListVehicles key={vehicle.id} img='' model={vehicle.model} year={vehicle.year} manufacturer={vehicle.manufacturer} capacity={vehicle.capacity} dealership={vehicle.dealership} />
+            {vehiclesHighlight.map(vehicle => (
+              <ListVehicles key={vehicle.id} img={vehicle.img} model={vehicle.model} year={vehicle.year} manufacturer={vehicle.manufacturer} capacity={vehicle.capacity} dealership={vehicle.dealership} />
             ))}
           </Row>
         </Col>
