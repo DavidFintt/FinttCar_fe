@@ -16,16 +16,15 @@ import jQuery from 'jquery';
 
 export default function ListVehicles(props){
     return(
-        <>
-            <Col>
-                <img src={props.img}></img>
-                <p><strong>Model: </strong> {props.model}</p>
-                <p><strong>Year: </strong> {props.year}</p>
-                <p><strong>Manufacturer: </strong> {props.manufacturer}</p>
-                <p><strong>Capacity: </strong> {props.capacity}</p>
-                <p><strong>Amount: </strong> {props.amount}</p>
-                <p><strong>Dealership: </strong> {props.dealership}</p>
-            </Col>
-        </>
+        <div className='bodyHighlights'>
+                <div className='vehicleCard'>
+                    <img className='imgVehicle' src={props.img}></img>
+                    <br />
+                    <br />
+                    <p><strong>{props.manufacturer} {props.model} </strong> - {props.year} </p>
+                    <hr></hr>
+                    <Button style={{backgroundColor:'black'}} className='btn btn-danger'> + Details </Button>
+                </div>
+        </div>
     )
 }
