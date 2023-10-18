@@ -1,0 +1,31 @@
+.bodyHighlights{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    /* display: flex; */
+}
+.imgVehicle{
+    width: 100%;
+    height: 300px;
+    border-radius: 8px 8px 0px 0px;
+}
+
+.vehicleCard{
+    background-color: #ffffff;
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.5);
+    padding-bottom: 30px;
+    /* width: 80%; */
+    border-radius: 8px;
+}
+
+.titleCar{
+    color: #424242;
+    font-weight: 400;
+}
+
+.dealerShipCar{
+    color: #6e5932;
+    font-weight: 300;
+}
