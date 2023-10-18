@@ -25,7 +25,7 @@ import {
     const vehicleService = new VehicleService();
 
     const [vehicles, setVehicles] = useState([{model: '', year: '', manufacturer: '', capacity:'', dealership: ''}]);
-    const [vehiclesHighlight, setVehHighlights] = useState([{model: '', year: '', amount:'', manufacturer: '', capacity:'', dealership: '', highlights:'', img:''}]);
+    const [vehiclesHighlight, setVehHighlights] = useState([{model: '', year: '', amount:'', manufacturer: '', capacity:'', dealership: '', highlights:'', img:'', name:''}]);
 
 
     const findVehicles = async () => {
@@ -33,30 +33,40 @@ import {
       const vehicleHighlights = vehicle.filter(vh => vh.highlights === true).map(vh => vh);
       setVehHighlights(vehicleHighlights)
       setVehicles(vehicle)
-      console.log(vehicleHighlights)
   
     }
 
     useEffect(() => {
       findVehicles();
     }, [])
+
     return (
       <>
         <CarouselApp />
         <p>Visualize abaixo os carros disponíveis em nossas concessionárias cadastradas:</p>
         <div className="highlight-container">
-          <div className="highlight">
-            <span className='bbb'><i class="fa fa-star" aria-hidden="true"></i> Highlights</span>
+          <div className="highlightTitle">
+            <span><i class="fa fa-star" aria-hidden="true"></i> Highlights</span>
         </div>
     </div>
 
     {/* Highlights session */}
       <div className='highlightsContent'>
-        <Row className='highlightRow'>
+        <Row className='VhcHighLightRow'>
               {vehiclesHighlight.map(vehicle => (
-              <Col md={4} key={vehicle.id}>
-                <ListVehicles key={vehicle.id} img={vehicle.img} model={vehicle.model} year={vehicle.year} manufacturer={vehicle.manufacturer} amount={vehicle.amount} capacity={vehicle.capacity} dealership={vehicle.dealership} />
-                </Col>
+                <Col md={3} key={vehicle.id}>
+                  <ListVehicles 
+                      key={vehicle.id}
+                      img={vehicle.img}
+                      model={vehicle.model}
+                      year={vehicle.year}
+                      manufacturer={vehicle.manufacturer}
+                      amount={vehicle.amount}
+                      capacity={vehicle.capacity} 
+                      dealership={vehicle.dealership} 
+                      price={vehicle.price} 
+                      name={vehicle.name}/>
+                  </Col>
               ))}
         </Row>
       </div>

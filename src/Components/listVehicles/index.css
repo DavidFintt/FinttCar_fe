@@ -8,7 +8,7 @@
 }
 .imgVehicle{
     width: 100%;
-    height: 300px;
+    height: 200px;
     border-radius: 8px 8px 0px 0px;
 }
 
@@ -20,12 +20,34 @@
     border-radius: 8px;
 }
 
-.titleCar{
+.yearVehicle{
+    font-size: 20px;
+    text-align: left;
+    margin-left: 20px;
+    color: rgb(114, 114, 114);
+    font-weight: bold;
+}
+
+.titleVehicle{
     color: #424242;
-    font-weight: 400;
+    margin-top: -20px;
+    font-size: 20px;
+    text-align: left;
+    margin-left: 20px;
 }
 
 .dealerShipCar{
     color: #6e5932;
     font-weight: 300;
+    font-size: 20px;
+    text-align: left;
+    margin-left: 20px;
+}
+
+.priceVehicle{
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: left;
+    margin-left: 20px;
 }
