@@ -46,18 +46,20 @@ import {
         <p>Visualize abaixo os carros disponíveis em nossas concessionárias cadastradas:</p>
         <div className="highlight-container">
           <div className="highlight">
-        <span><i class="fa fa-star" aria-hidden="true"></i> Highlights</span>
+            <span className='bbb'><i class="fa fa-star" aria-hidden="true"></i> Highlights</span>
         </div>
     </div>
 
     {/* Highlights session */}
-      <Row>
-            {vehiclesHighlight.map(vehicle => (
-            <Col md={2} key={vehicle.id}>
-              <ListVehicles key={vehicle.id} img={vehicle.img} model={vehicle.model} year={vehicle.year} manufacturer={vehicle.manufacturer} amount={vehicle.amount} capacity={vehicle.capacity} dealership={vehicle.dealership} />
-              </Col>
-            ))}
-      </Row>
+      <div className='highlightsContent'>
+        <Row className='highlightRow'>
+              {vehiclesHighlight.map(vehicle => (
+              <Col md={4} key={vehicle.id}>
+                <ListVehicles key={vehicle.id} img={vehicle.img} model={vehicle.model} year={vehicle.year} manufacturer={vehicle.manufacturer} amount={vehicle.amount} capacity={vehicle.capacity} dealership={vehicle.dealership} />
+                </Col>
+              ))}
+        </Row>
+      </div>
       </>
     );
   }

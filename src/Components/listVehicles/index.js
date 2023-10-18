@@ -21,7 +21,8 @@ export default function ListVehicles(props){
                     <img className='imgVehicle' src={props.img}></img>
                     <br />
                     <br />
-                    <p><strong>{props.manufacturer} {props.model} </strong> - {props.year} </p>
+                    <p className='titleCar'> {props.manufacturer} {props.model}  - {props.year} </p>
+                    <p className='dealerShipCar'>  {props.dealership}  </p>
                     <hr></hr>
                     <Button style={{backgroundColor:'black'}} className='btn btn-danger'> + Details </Button>
                 </div>

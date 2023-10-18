@@ -3,10 +3,8 @@
     padding-bottom: 20px;
     margin-left: auto;
     margin-right: auto;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    width: 80%;
+    width: 100%;
+    /* display: flex; */
 }
 .imgVehicle{
     width: 100%;
@@ -19,7 +17,15 @@
     box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.5);
     padding-bottom: 30px;
     /* width: 80%; */
-    margin-left: auto;
-    margin-left: auto;
     border-radius: 8px;
+}
+
+.titleCar{
+    color: #424242;
+    font-weight: 400;
+}
+
+.dealerShipCar{
+    color: #6e5932;
+    font-weight: 300;
 }
