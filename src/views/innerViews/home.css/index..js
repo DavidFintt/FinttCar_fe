@@ -24,8 +24,8 @@ import {
 
     const vehicleService = new VehicleService();
 
-    const [vehicles, setVehicles] = useState([{model: '', year: '', manufacturer: '', capacity:'', dealership: ''}]);
-    const [vehiclesHighlight, setVehHighlights] = useState([{model: '', year: '', amount:'', manufacturer: '', capacity:'', dealership: '', highlights:'', img:'', name:''}]);
+    const [vehicles, setVehicles] = useState([]);
+    const [vehiclesHighlight, setVehHighlights] = useState([]);
 
 
     const findVehicles = async () => {
@@ -33,8 +33,9 @@ import {
       const vehicleHighlights = vehicle.filter(vh => vh.highlights === true).map(vh => vh);
       setVehHighlights(vehicleHighlights)
       setVehicles(vehicle)
-  
     }
+
+    console.log(vehicles)
 
     useEffect(() => {
       findVehicles();
@@ -46,7 +47,7 @@ import {
         <p>Visualize abaixo os carros disponíveis em nossas concessionárias cadastradas:</p>
         <div className="highlight-container">
           <div className="highlightTitle">
-            <span><i class="fa fa-star" aria-hidden="true"></i> Highlights</span>
+            <span><i className="fa fa-star" aria-hidden="true"></i> Highlights</span>
         </div>
     </div>
 
@@ -54,9 +55,8 @@ import {
       <div className='highlightsContent'>
         <Row className='VhcHighLightRow'>
               {vehiclesHighlight.map(vehicle => (
-                <Col md={3} key={vehicle.id}>
+                <Col className='colMapVehiclesHightlight' md={3} key={vehicle.id}>
                   <ListVehicles 
-                      key={vehicle.id}
                       img={vehicle.img}
                       model={vehicle.model}
                       year={vehicle.year}

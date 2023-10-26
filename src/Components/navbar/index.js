@@ -17,8 +17,8 @@ export default function NavbarBase(){
         <>
         <Navbar className="navbar navBase navbar-expand-md">
             <NavbarBrand href="#"><img className='logoNav' src={logo} alt="Logo"></img></NavbarBrand>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon"></span>
             </button>
             <Nav className="navbar-collapse justify-content-center">
             </Nav>
