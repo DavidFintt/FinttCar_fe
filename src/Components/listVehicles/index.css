@@ -21,33 +21,32 @@
 }
 
 .yearVehicle{
-    font-size: 20px;
-    text-align: left;
-    margin-left: 20px;
-    color: rgb(114, 114, 114);
+    font-size: 13px;
+    text-align: center;
+    margin-top: -20px;
+    color: #424242;
     font-weight: bold;
 }
 
 .titleVehicle{
-    color: #424242;
+    color: rgb(114, 114, 114);
+
     margin-top: -20px;
     font-size: 20px;
-    text-align: left;
-    margin-left: 20px;
+    text-align: center;
 }
 
 .dealerShipCar{
     color: #6e5932;
     font-weight: 300;
     font-size: 20px;
-    text-align: left;
     text-align: center;
 }
 
 .priceVehicle{
-    color: rgb(196, 61, 61);
+    color: rgb(255, 255, 255);
     font-weight: 400;
-    font-size: 25px;
+    font-size: 22px;
     margin-top: 40px;
     text-align: center;
     margin-left: auto;
