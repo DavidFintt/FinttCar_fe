@@ -21,9 +21,6 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-
-
-
 export default function Home() {
 
   const vehicleService = new VehicleService();
@@ -40,19 +37,12 @@ export default function Home() {
     
   }
 
-  const toggleVehicleDetail = () => {
-    setVehicleDetail(!vehicleDetail)
-  }
-
   useEffect(() => {
     findVehicles();
   }, [])
 
   return (
     <>
-    <Modal isOpen={vehicleDetail}>
-
-    </Modal>
   {/* Carousel initi */}
       <CarouselApp />
       <div className="highlight-container">
@@ -62,14 +52,15 @@ export default function Home() {
   </div>
 
   {/* Highlights session */}
-    <div className='highlightsContent'>
-      <Row className='VhcHighLightRow'>
-        <SliderHighlights 
-          vehiclesHighlight={vehiclesHighlight}>
-          toggleVehicleDetail={toggleVehicleDetail}
-        </SliderHighlights>
-      </Row>
-    </div>
+    {vehiclesHighlight.length > 0 &&
+      <div className='highlightsContent'>
+        <Row className='VhcHighLightRow'>
+          <SliderHighlights 
+            vehiclesHighlight={vehiclesHighlight}>
+          </SliderHighlights>
+        </Row>
+      </div>
+    } 
     </>
   );
 }
